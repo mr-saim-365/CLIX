@@ -5,7 +5,7 @@ const Hero = () => {
     return (
         <>
             <section id="hero" className="w-full bg-[#008374] relative pt-[140px] accent-background">
-                <div className="container md:w-[90%] 2xl:w-[50%] mx-auto relative z-[3] px-3 w-full font-montserrat" data-aos="fade-up" data-aos-delay="100">
+                <div className="container md:w-[90%] 2xl:w-[80%] mx-auto relative z-[3] px-3 w-full font-montserrat" data-aos="fade-up" data-aos-delay="100">
                     <div className="flex flex-wrap justify-between gap-y-10">
                         <div className="w-full lg:w-1/2 order-2 lg:order-1 flex flex-col justify-center">
                             <h2 className="md:text-[48px] text-[#ffffff] font-bold mb-5 text-[36px]">
@@ -24,27 +24,28 @@ const Hero = () => {
                 </div>
 
                 <div className="relative pt-0 pb-[60px] z-[4]" data-aos="fade-up" data-aos-delay="200">
-                    <div className="container relative w-full px-3 md:w-[90%] 2xl:w-[50%] mx-auto">
+                    <div className="container relative w-full px-3 md:w-[90%] 2xl:w-[80%] mx-auto">
                         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 mt-16">
-                            <div className="h-full w-full text-center p-[60px_30px] relative overflow-hidden bg-[#008374] rounded-lg shadow-[0_0_29px_rgba(0,0,0,0.1)] transition-all duration-300 hover:bg-[var(--background-color)/90]">
+                            <div className="h-full w-full text-center p-[60px_30px] relative  overflow-hidden bg-[#008374] rounded-lg shadow-[0_0_29px_rgba(255,255,255,0.5)]
+ transition-all duration-300 hover:bg-[var(--background-color)/90]">
                                 <h4 className="font-bold text-2xl mb-[15px]">
                                     <a href="#" className="text-[#ffffff] transition-colors duration-300 hover:text-[var(--contrast-color)]">Code</a>
                                 </h4>
                             </div>
 
-                            <div className="h-full w-full text-center p-[60px_30px] relative overflow-hidden bg-[#008374] rounded-lg shadow-[0_0_29px_rgba(0,0,0,0.1)] transition-all duration-300 hover:bg-[var(--background-color)/90]">
+                            <div className="h-full w-full text-center p-[60px_30px] relative overflow-hidden bg-[#008374] rounded-lg shadow-[0_0_29px_rgba(255,255,255,0.5)] transition-all duration-300 hover:bg-[var(--background-color)/90]">
                                 <h4 className="font-bold text-2xl mb-[15px]">
                                     <a href="#" className="text-[#ffffff] transition-colors duration-300 hover:text-[var(--contrast-color)]">Innovate</a>
                                 </h4>
                             </div>
 
-                            <div className="h-full w-full text-center p-[60px_30px] relative overflow-hidden bg-[#008374] rounded-lg shadow-[0_0_29px_rgba(0,0,0,0.1)] transition-all duration-300 hover:bg-[var(--background-color)/90]">
+                            <div className="h-full w-full text-center p-[60px_30px] relative overflow-hidden bg-[#008374] rounded-lg shadow-[0_0_29px_rgba(255,255,255,0.5)] transition-all duration-300 hover:bg-[var(--background-color)/90]">
                                 <h4 className="font-bold text-2xl mb-[15px]">
                                     <a href="#" className="text-[#ffffff] transition-colors duration-300 hover:text-[var(--contrast-color)]">Transform</a>
                                 </h4>
                             </div>
 
-                            <div className="h-full w-full text-center p-[60px_30px] relative overflow-hidden bg-[#008374] rounded-lg shadow-[0_0_29px_rgba(0,0,0,0.1)] transition-all duration-300 hover:bg-[var(--background-color)/90]">
+                            <div className="h-full w-full text-center p-[60px_30px] relative overflow-hidden bg-[#008374] rounded-lg shadow-[0_0_29px_rgba(255,255,255,0.5)] transition-all duration-300 hover:bg-[var(--background-color)/90]">
                                 <h4 className="font-bold text-2xl mb-[15px]">
                                     <a href="#" className="text-[#ffffff] transition-colors duration-300 hover:text-[var(--contrast-color)]">Succeed</a>
                                 </h4>

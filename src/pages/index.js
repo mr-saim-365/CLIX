@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Navbar from "../components/Navbar"
 import Services from "@/components/Services";
+import ScrollTop from "@/components/ScrollTop";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
         <Services />
         <Contact />
       </div>
+      <ScrollTop />
       <Footer />
     </>
   )
