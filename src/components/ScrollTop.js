@@ -30,10 +30,10 @@ const ScrollTop = () => {
                 onClick={toggleScrollTop}
                 href="#"
                 id="scrollTop"
-                className={`fixed right-[15px] bottom-[15px] z-[99999] w-11 h-11 rounded-full bg-[#008374] flex items-center justify-center transition-opacity duration-300 ${arrowActive ? "opacity-100 visible" : "opacity-0 invisible"
+                className={`fixed right-[15px] bottom-[15px] z-[99999] w-11 h-11 rounded-full text-[#ffffff] bg-deep-purple flex items-center justify-center transition-opacity duration-300 ${arrowActive ? "opacity-100 visible" : "opacity-0 invisible"
                     }`}
 
-            ><IoMdArrowUp size={20} className="text-[#ffffff] " />
+            ><IoMdArrowUp size={20} />
             </Link>
         </>
     )

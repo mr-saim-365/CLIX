@@ -9,9 +9,9 @@ const Navbar = () => {
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 w-full shadow z-50">
+    <header className="w-full shadow z-50">
       {/* Top Bar */}
-      <div className="bg-[#008374] text-[#ffffff] py-4 w-full text-sm md:text-[15px]">
+      <div className="bg-hero-gradient-r text-[#ffffff] py-4 w-full text-sm md:text-[15px]">
         <div className="container mx-auto w-full md:px-0 md:w-[90%] 2xl:w-[80%] flex justify-between items-center px-4">
           <div className="flex items-center space-x-4">
             <a href="mailto:contact@example.com" className="flex items-center space-x- hover:text-gray-700">
@@ -29,7 +29,7 @@ const Navbar = () => {
       </div>
 
       {/* Branding & Navigation */}
-      <div className="bg-[#008374] py-4">
+      <div className="bg-hero-gradient-r py-4">
         <div className="container mx-auto flex text-[#ffffff] justify-between items-center px-4">
           <Link href="/" className="flex items-center space-x-1 text-2xl font-bold">
             <span>CLI-X</span>

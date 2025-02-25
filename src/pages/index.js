@@ -10,10 +10,8 @@ const Home = () => {
     <>
       <Navbar />
       <Hero />
-      <div className="w-full px-2 md:px-0 md:w-[90%] 2xl:w-[70%] mx-auto">
-        <Services />
-        <Contact />
-      </div>
+      <Services />
+      <Contact />
       <ScrollTop />
       <Footer />
     </>

@@ -10,10 +10,18 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        'dark-bg': '#0f0f1a',  // Base dark color
+        'deep-purple': '#2b1957',  // Deep purple hue
+        'soft-purple': '#5a3d91',  // Lighter purple tone
       },
 
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],
+      },
+
+      backgroundImage: {
+        'hero-gradient-r': 'linear-gradient(135deg, #0f0f1a 50%, #2b1957 110%, #5a3d91 80%)',
+        'hero-gradient-l': 'linear-gradient(270deg, #0f0f1a 50%, #2b1957 110%, #5a3d91 80%)',
       },
     },
   },
