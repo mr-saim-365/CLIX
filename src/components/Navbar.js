@@ -9,7 +9,7 @@ const Navbar = () => {
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
 
   return (
-    <header className="w-full shadow z-50">
+    <header >
       {/* Top Bar */}
       <div className="bg-hero-gradient-r text-[#ffffff] py-4 w-full text-sm md:text-[15px]">
         <div className="container mx-auto w-full md:px-0 md:w-[90%] 2xl:w-[80%] flex justify-between items-center px-4">
