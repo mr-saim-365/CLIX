@@ -1,143 +1,133 @@
-import { useRef, useEffect } from "react";
-import { useIntersection } from "react-use";
-import gsap from "gsap";
 
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const Services = () => {
 
-    const sectionRef = useRef(null);
-
-    const intersection = useIntersection(sectionRef, {
-        root: null,
-        rootMargin: "0px",
+    const { ref, inView } = useInView({
+        triggerOnce: false,
         threshold: 0.2,
     });
 
-    useEffect(() => {
-        const isSmallScreen = window.innerWidth < 768;
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: { staggerChildren: 0.3 },
+        },
+    };
 
-        if (intersection?.isIntersecting) {
-            // Animate IN
-            gsap.to(".fadeIn", {
-                opacity: 1,
-                x: isSmallScreen ? 0 : 20,
-                y: isSmallScreen ? 20 : 0,
-                duration: 2,
-                ease: "power4.out",
-                stagger: { amount: 0.3 },
-            });
-        } else {
-            // Animate OUT
-            gsap.to(".fadeIn", {
-                opacity: 0,
-                x: isSmallScreen ? 80 : -80,
-                y: isSmallScreen ? -20 : 0,
-                duration: 2,
-                ease: "power4.out",
-            });
-        }
-    }, [intersection]);
+    const itemVariants = {
+        hidden: { opacity: 0, x: -80 },
+        visible: { opacity: 1, x: 0, transition: { duration: 0.8 } },
+    };
+
 
     return (
         <>
-            <section className="bg-hero-gradient-l py-16">
-                <div ref={sectionRef} className="w-full px-3 md:px-0 md:w-[90%] 2xl:w-[70%] mx-auto text-[#ffffff]">
-                    <div className="fadeIn mx-auto 2xl:w-[80%] md:w-[90%] text-center mb-12">
-                        <h2 className="text-3xl font-bold font-montserrat mb-4">Our Services</h2>
-                        <p className="text-white/60">
+            <section ref={ref} className="bg-hero-gradient-l py-16">
+                <div ref={ref} className="w-full px-6 md:px-0 md:w-[90%] 2xl:w-[70%] mx-auto text-[#ffffff]">
+                    <motion.div initial="hidden"
+                        animate={inView ? "visible" : "hidden"} variants={containerVariants} className="mx-auto 2xl:w-[80%] md:w-[90%] text-center mb-12">
+                        <motion.h1
+                            variants={itemVariants}
+                            className="text-3xl font-bold font-montserrat mb-4">Our Services</motion.h1>
+                        <motion.p
+                            variants={itemVariants}
+                            className="text-white/60">
                             From innovative software solutions to captivating design, we craft
                             digital excellence tailored to elevate your business.
-                        </p>
-                    </div>
+                        </motion.p>
+                    </motion.div>
 
-                    <div className="container fadeIn mx-auto grid grid-cols-1 text-sm sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                        <div
+                    <motion.div initial="hidden"
+                        animate={inView ? "visible" : "hidden"} variants={containerVariants} className="container mx-auto grid grid-cols-1 text-sm sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <motion.div
+                            variants={itemVariants}
                             className="service-item elative md:md:p-10 p-5 bg-[#222222] rounded-2xl shadow-lg"
-                            data-aos="fade-up"
-                            data-aos-delay="100"
                         >
                             <h3 className="text-[18px] md:text-[22px] mb-3 inline-block pb-2 font-semibold border-[#172a28]/10">Web Design</h3>
                             <p>
                                 Designing Your Digital Dreams: Custom Websites Tailored to Your
                                 Unique Vision
                             </p>
-                        </div>
+                        </motion.div>
 
-                        <div
+                        <motion.div
+                            variants={itemVariants}
                             className="service-item   relative md:p-10 p-5  bg-[#222222] rounded-2xl shadow-lg"
-                            data-aos="fade-up"
-                            data-aos-delay="200"
+
                         >
                             <h3 className="text-[18px] md:text-[22px]  mb-3 pb-2 inline-block  font-semibold border-[#172a28]/10">Web Development</h3>
                             <p>
                                 Building the Backbone of Your Online Presence: Expert Web
                                 Solutions
                             </p>
-                        </div>
+                        </motion.div>
 
-                        <div
+                        <motion.div
+                            variants={itemVariants}
                             className="service-item  relative md:p-10 p-5  bg-[#222222] rounded-2xl shadow-lg"
-                            data-aos="fade-up"
-                            data-aos-delay="300"
                         >
                             <h3 className="text-[18px] md:text-[22px]  mb-3 pb-2 inline-block font-semibold border-[#172a28]/10">Software Consultancy</h3>
                             <p>
                                 Transforming Challenges into Opportunities: Expert Software
                                 Consultancy Services
                             </p>
-                        </div>
+                        </motion.div>
 
-                        <div
+                        <motion.div
+                            variants={itemVariants}
                             className="service-item  relative md:p-10 p-5  bg-[#222222] rounded-2xl shadow-lg"
-                            data-aos="fade-up"
-                            data-aos-delay="400"
+
                         >
                             <h3 className="text-[18px] md:text-[22px]  mb-3 pb-2 inline-block  font-semibold border-[#172a28]/10">Videography</h3>
                             <p>
                                 Telling Your Story Through Cinematic Excellence: Top-Tier
                                 Videography Solutions
                             </p>
-                        </div>
+                        </motion.div>
 
-                        <div
+                        <motion.div
+                            variants={itemVariants}
                             className="service-item  relative md:p-10 p-5  bg-[#222222] rounded-2xl shadow-lg"
-                            data-aos="fade-up"
-                            data-aos-delay="500"
                         >
                             <h3 className="text-[18px] md:text-[22px]  mb-3 pb-2 inline-block  font-semibold border-[#172a28]/10">Graphic Design</h3>
                             <p>
                                 Transforming Ideas into Visual Masterpieces: Professional Graphic
                                 Design
                             </p>
-                        </div>
+                        </motion.div>
 
-                        <div
+                        <motion.div
+                            variants={itemVariants}
                             className="service-item  relative md:p-10 p-5  bg-[#222222] rounded-2xl shadow-lg"
-                            data-aos="fade-up"
-                            data-aos-delay="600"
                         >
                             <h3 className="text-[18px] md:text-[22px]  mb-3 pb-2 inline-block  font-semibold border-[#172a28]/10">Accounts Consultancy</h3>
                             <p>
                                 Focuses on the clarity and transparency that your accounting
                                 services provide.
                             </p>
-                        </div>
-                    </div>
+                        </motion.div>
+                    </motion.div>
 
-                    <section id="about" className="about  mt-16">
-                        <div className="container fadeIn mx-auto text-center mb-12" data-aos="fade-up">
-                            <h2 className="text-3xl font-bold mb-4">About Us</h2>
-                            <p className="text-white/60">Crafting Tomorrow's Technology, Today</p>
-                        </div>
+                    <section ref={ref} id="about" className="about  mt-16">
+                        <motion.div initial="hidden"
+                            animate={inView ? "visible" : "hidden"} variants={containerVariants} className="container mx-auto text-center mb-12" data-aos="fade-up">
+                            <motion.h2 variants={itemVariants} className="text-3xl font-bold mb-4">About Us</motion.h2>
+                            <motion.p variants={itemVariants} className="text-white/60">Crafting Tomorrow's Technology, Today</motion.p >
+                        </motion.div>
 
-                        <div className="container fadeIn mx-auto grid grid-cols-1 lg:grid-cols-2 gap-2 md:gap-6 text-sm md:text-[16px] items-center">
-                            <div data-aos="fade-up" data-aos-delay="100">
-                                <h3 className="text-[16px] sm:text-2xl font-semibold  mb-4">
+                        <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-2 md:gap-6 text-sm md:text-[16px] items-center">
+                            <motion.div initial="hidden"
+                                animate={inView ? "visible" : "hidden"} variants={containerVariants} >
+                                <motion.h3 variants={itemVariants} className="text-[16px] sm:text-2xl font-semibold  mb-4">
                                     Empowering Your Digital Future with Innovative Solutions
-                                </h3>
-                            </div>
-                            <div data-aos="fade-up" data-aos-delay="250">
-                                <div className="content lg:pl-8">
+                                </motion.h3>
+                            </motion.div>
+                            <motion.div initial="hidden"
+                                animate={inView ? "visible" : "hidden"} variants={containerVariants} >
+                                <motion.div variants={itemVariants} className="content lg:pl-8">
                                     <p className="italic text-[#ffffff] mb-4">
                                         Welcome to Cli-X, where innovation meets technology. As a
                                         leading digital software house, we are committed to delivering
@@ -150,13 +140,13 @@ const Services = () => {
                                         unique challenges of our clients. We are driven by a passion
                                         for excellence and a commitment to exceeding expectations.
                                     </p>
-                                </div>
-                            </div>
+                                </motion.div>
+                            </motion.div>
                         </div>
                     </section>
                 </div>
 
-            </section>
+            </section >
         </>
     );
 };

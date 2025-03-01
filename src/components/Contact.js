@@ -1,122 +1,119 @@
-import { BsGeoAlt } from "react-icons/bs";
-import { BsTelephone } from "react-icons/bs";
-import { BsEnvelope } from "react-icons/bs";
-import { BsClock } from "react-icons/bs";
 
-const Contact = () => {
+import { motion, useAnimation } from "framer-motion";
+import { useEffect, useRef } from "react";
+import { BsGeoAlt, BsTelephone, BsEnvelope, BsClock } from "react-icons/bs";
+import { useInView } from "react-intersection-observer";
+
+const ContactSection = () => {
+    const controls = useAnimation();
+    const { ref, inView } = useInView({ triggerOnce: false, threshold: 0.2 });
+
+    useEffect(() => {
+        if (inView) {
+            controls.start("visible");
+        } else {
+            controls.start("hidden");
+        }
+    }, [inView, controls]);
 
     return (
-        <>
-            <section id="contact" className="contact py-16 bg-hero-gradient-r">
+        <section className="contact py-16 bg-hero-gradient-r">
+            <motion.div
+                ref={ref}
+                initial="hidden"
+                animate={controls}
+                variants={{
+                    hidden: { scale: 0.8, opacity: 0 },
+                    visible: { scale: 1, opacity: 1 }
+                }}
+                transition={{ duration: 0.8 }}
+                className="container mx-auto text-center mb-12"
+            >
+                <h2 className="text-3xl text-[#ffffff] font-bold mb-4">Contact Us</h2>
+                <p className="text-white/60">
+                    Reach out today and let's center shaping your success together.
+                </p>
+            </motion.div>
 
-                <div className="container mx-auto text-center mb-12" data-aos="fade-up">
-                    <h2 className="text-3xl text-[#ffffff] font-bold mb-4">Contact Us</h2>
-                    <p className="text-white/60" >Reach out today and let's center shaping your success together.</p>
-                </div>
+            <motion.div
+                ref={ref}
+                initial="hidden"
+                animate={controls}
+                variants={{
+                    hidden: { scale: 0.8, opacity: 0 },
+                    visible: { scale: 1, opacity: 1 }
+                }}
+                transition={{ duration: 1 }}
+                className="container mx-auto"
+            >
+                <div className="flex lg:flex-row items-center flex-col gap-8 px-3 md:px-0">
 
-                <div className="container mx-auto" data-aos="fade-up" data-aos-delay="100">
-                    <div className="flex lg:flex-row items-center flex-col gap-8 px-3 md:px-0">
+                    <div className="flex flex-col bg-[#222222] text-[#ffffff] rounded-lg text-sm p-5 space-y-6 lg:w-[40%] 2xl:w-[30%] w-full">
 
-                        <div className="flex flex-col bg-[#222222] text-[#ffffff] rounded-lg text-sm p-5 space-y-6 lg:w-[40%] 2xl:w-[30%] w-full">
-                            <div className="flex items-center space-x-4 bg-white/10 p-5 rounded-md" data-aos="fade-up" data-aos-delay="200">
+                        {[
+                            { icon: <BsGeoAlt size={20} />, title: "Address", desc: "Industrial Area, North Karachi, Karachi, Pakistan" },
+                            { icon: <BsTelephone size={20} />, title: "Call Us", desc: "0321-2427626" },
+                            { icon: <BsEnvelope size={20} />, title: "Email Us", desc: "infoclix@gmail.com" },
+                            { icon: <BsClock size={20} />, title: "Open Hours", desc: "24 hrs" }
+                        ].map((item, index) => (
+                            <motion.div
+                                key={index}
+                                ref={ref}
+                                initial="hidden"
+                                animate={controls}
+                                variants={{
+                                    hidden: { opacity: 0, y: 30 },
+                                    visible: { opacity: 1, y: 0 }
+                                }}
+                                transition={{ duration: 0.5, delay: index * 0.2 }}
+                                className="flex items-center space-x-4 bg-white/10 p-5 rounded-md"
+                            >
                                 <div className="rounded-[50%] bg-white/20 w-12 h-12 flex items-center justify-center">
-                                    <BsGeoAlt size={20} />
+                                    {item.icon}
                                 </div>
-
                                 <div>
-                                    <h3 className="font-semibold text-lg mb-[5px]">Address</h3>
-                                    <p>Industrial Area, North Karachi, Karachi, Pakistan</p>
+                                    <h3 className="font-semibold text-lg mb-[5px]">{item.title}</h3>
+                                    <p>{item.desc}</p>
                                 </div>
+                            </motion.div>
+                        ))}
+
+                    </div>
+
+                    <div className="lg:w-[60%] 2xl:w-[70%] w-full">
+                        <motion.form
+                            ref={ref}
+                            initial="hidden"
+                            animate={controls}
+                            variants={{
+                                hidden: { opacity: 0, y: 50 },
+                                visible: { opacity: 1, y: 0 }
+                            }}
+                            transition={{ duration: 1 }}
+                            action="forms/contact.php"
+                            method="post"
+                            className="space-y-6"
+                        >
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <input type="text" name="name" placeholder="Your Name" required className="w-full p-3 rounded-lg text-[#ffffff] bg-[#222222] focus:ring-1 focus:ring-white/60 focus:outline-none" />
+                                <input type="email" name="email" placeholder="Your Email" required className="w-full p-3 rounded-lg text-[#ffffff] bg-[#222222] focus:ring-1 focus:ring-white/60 focus:outline-none" />
                             </div>
 
-                            <div className="flex items-center space-x-4 bg-white/10 p-5 rounded-md" data-aos="fade-up" data-aos-delay="300">
-                                <div className="rounded-[50%] bg-white/20 w-12 h-12 flex items-center justify-center">
-                                    <BsTelephone size={20} />
-                                </div>
+                            <input type="text" name="subject" placeholder="Subject" required className="w-full p-3 rounded-lg text-[#ffffff] bg-[#222222] focus:ring-1 focus:ring-white/60 focus:outline-none" />
 
-                                <div>
-                                    <h3 className="font-semibold text-lg mb-[5px]">Call Us</h3>
-                                    <p>0321-2427626</p>
-                                </div>
+                            <textarea name="message" rows="8" placeholder="Message" required className="w-full p-3 rounded-lg text-[#ffffff] bg-[#222222] focus:ring-1 focus:ring-white/60 focus:outline-none"></textarea>
+
+                            <div className="text-center">
+                                <button type="submit" className="text-[#ffffff] px-6 py-3 rounded-[50px] bg-[#222222] transition duration-200">
+                                    Send Message
+                                </button>
                             </div>
-
-                            <div className="flex items-center space-x-4 bg-white/10 p-5 rounded-md" data-aos="fade-up" data-aos-delay="400">
-                                <div className="rounded-[50%] bg-white/20 w-12 h-12 flex items-center justify-center">
-                                    <BsEnvelope size={20} />
-                                </div>
-
-                                <div>
-                                    <h3 className="font-semibold text-lg mb-[5px]">Email Us</h3>
-                                    <p>infoclix@gmail.com</p>
-                                </div>
-                            </div>
-
-                            <div className="flex items-center space-x-4 bg-white/10 p-5 rounded-md" data-aos="fade-up" data-aos-delay="500">
-                                <div className="rounded-[50%] bg-white/20 w-12 h-12 flex items-center justify-center">
-                                    <BsClock size={20} />
-                                </div>
-
-                                <div>
-                                    <h3 className="font-semibold text-lg mb-[5px]">Open Hours:</h3>
-                                    <p>24 hrs</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="lg:w-[60%] 2xl:w-[70%] w-full">
-                            <form action="forms/contact.php" method="post" className="space-y-6" data-aos="fade" data-aos-delay="100">
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                    <input
-                                        type="text"
-                                        name="name"
-                                        placeholder="Your Name"
-                                        required
-                                        className="w-full p-3 rounded-lg text-[#ffffff] bg-[#222222] focus:ring-1 focus:ring-white/60 focus:outline-none"
-                                    />
-                                    <input
-                                        type="email"
-                                        name="email"
-                                        placeholder="Your Email"
-                                        required
-                                        className="w-full p-3 rounded-lg  text-[#ffffff] bg-[#222222]  focus:ring-1 focus:ring-white/60 focus:outline-none"
-                                    />
-                                </div>
-
-                                <input
-                                    type="text"
-                                    name="subject"
-                                    placeholder="Subject"
-                                    required
-                                    className="w-full p-3 rounded-lg text-[#ffffff] bg-[#222222]  focus:ring-1 focus:ring-white/60 focus:outline-none"
-                                />
-
-                                <textarea
-                                    name="message"
-                                    rows="8"
-                                    placeholder="Message"
-                                    required
-                                    className="w-full p-3 rounded-lg text-[#ffffff] bg-[#222222]  focus:ring-1 focus:ring-white/60 focus:outline-none"
-                                ></textarea>
-
-                                <div className="text-center">
-                                    <div className="loading hidden text-primary">Loading...</div>
-                                    <div className="error-message hidden text-red-500"></div>
-                                    <div className="sent-message hidden text-green-500">Your message has been sent. Thank you!</div>
-
-                                    <button
-                                        type="submit"
-                                        className="text-[#ffffff] px-6 py-3 rounded-[50px] bg-[#222222] transition duration-200"
-                                    >
-                                        Send Message
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
+                        </motion.form>
                     </div>
                 </div>
-            </section>
-        </>
-    )
-}
+            </motion.div>
+        </section>
+    );
+};
 
-export default Contact;
+export default ContactSection;
