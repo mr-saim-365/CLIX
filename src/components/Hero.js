@@ -19,7 +19,7 @@ const Hero = () => {
 
     return (
         <>
-            <section id="hero" className="w-full bg-hero-gradient-r relative pt-[140px] accent-background">
+            <section id="hero" className="w-full bg-hero-gradient relative pt-[140px] accent-background">
                 <div className="container md:w-[90%] 2xl:w-[80%] mx-auto relative z-[3] px-6 w-full font-montserrat" data-aos="fade-up" data-aos-delay="100">
                     <div className="flex flex-wrap justify-between gap-y-10">
                         <div className="w-full lg:w-1/2 order-2 lg:order-1 flex flex-col justify-center">

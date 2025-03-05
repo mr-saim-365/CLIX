@@ -17,7 +17,7 @@ const ContactSection = () => {
     }, [inView, controls]);
 
     return (
-        <section className="contact py-16 bg-hero-gradient-r">
+        <section className="contact py-16 bg-hero-gradient">
             <motion.div
                 ref={ref}
                 initial="hidden"

@@ -4,16 +4,23 @@ import Hero from "@/components/Hero";
 import Navbar from "../components/Navbar"
 import Services from "@/components/Services";
 import ScrollTop from "@/components/ScrollTop";
+import OurStory from "@/components/OurStory";
+import Cards from "@/components/Cards";
 
 const Home = () => {
   return (
     <>
-      <Navbar />
-      <Hero />
-      <Services />
-      <Contact />
-      <ScrollTop />
-      <Footer />
+      <div className="p-0 m-0 box-border border-none">
+        <Navbar />
+        <Hero />
+        <OurStory />
+        <Cards />
+        <Services />
+        <Contact />
+        <ScrollTop />
+        <Footer />
+      </div>
+
     </>
   )
 

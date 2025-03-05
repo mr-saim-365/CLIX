@@ -20,8 +20,10 @@ export default {
       },
 
       backgroundImage: {
-        'hero-gradient-r': 'linear-gradient(135deg, #0f0f1a 60%, #2b1957 110%, #5a3d91 80%)',
-        'hero-gradient-l': 'linear-gradient(-135deg, #0f0f1a 60%, #2b1957 110%, #5a3d91 80%)',
+        'hero-gradient-r': 'linear-gradient(135deg, #0f0f1a 70%, #2b1957 110%, #5a3d91 80%)',
+        'hero-gradient-l': 'linear-gradient(-135deg, #0f0f1a 80%, #2b1957 105%, #5a3d91 80%)',
+        'hero-gradient': 'linear-gradient(to top right, #0f0f1a 80%, #2b1957 105%, #5a3d91 80%)',
+        'hero-gradient-1': 'linear-gradient(to top left, #0f0f1a 85%, #2b1957 110%, #5a3d91 80%)',
       },
     },
   },

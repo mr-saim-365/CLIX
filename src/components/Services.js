@@ -25,7 +25,7 @@ const Services = () => {
 
     return (
         <>
-            <section ref={ref} className="bg-hero-gradient-l py-16">
+            <section ref={ref} className="bg-hero-gradient-r py-16">
                 <div ref={ref} className="w-full px-6 md:px-0 md:w-[90%] 2xl:w-[70%] mx-auto text-[#ffffff]">
                     <motion.div initial="hidden"
                         animate={inView ? "visible" : "hidden"} variants={containerVariants} className="mx-auto 2xl:w-[80%] md:w-[90%] text-center mb-12">
