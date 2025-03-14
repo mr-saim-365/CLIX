@@ -11,7 +11,6 @@ const Home = () => {
   return (
     <>
       <div className="p-0 m-0 box-border border-none">
-        <Navbar />
         <Hero />
         <OurStory />
         <Cards />

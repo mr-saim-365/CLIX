@@ -20,12 +20,20 @@ export default {
       },
 
       backgroundImage: {
-        'hero-gradient-r': 'linear-gradient(135deg, #0f0f1a 70%, #2b1957 110%, #5a3d91 80%)',
-        'hero-gradient-l': 'linear-gradient(-135deg, #0f0f1a 80%, #2b1957 105%, #5a3d91 80%)',
-        'hero-gradient': 'linear-gradient(to top right, #0f0f1a 80%, #2b1957 105%, #5a3d91 80%)',
-        'hero-gradient-1': 'linear-gradient(to top left, #0f0f1a 85%, #2b1957 110%, #5a3d91 80%)',
+        'hero-gradient-tl': 'linear-gradient(to bottom right, #0f0f1a 80%, #2b1957 105%, #5a3d91 80%)',
+        'hero-gradient-tr': 'linear-gradient(to bottom left, #0f0f1a 80%, #2b1957 105%, #5a3d91 80%)',
+        'hero-gradient-bl': 'linear-gradient(to top right, #0f0f1a 80%, #2b1957 105%, #5a3d91 80%)',
+        'hero-gradient-br': 'linear-gradient(to top left, #0f0f1a 80%, #2b1957 105%, #5a3d91 80%)',
+        // 'hero-gradient-tl': 'radial-gradient(circle at top left,  #0f0f1a 82% , #2b1957 105%,#5a3d91 80%)',
+        // 'hero-gradient-tr': 'radial-gradient(circle at top right,  #0f0f1a 82% , #2b1957 105%,#5a3d91 80%)',
+        // 'hero-gradient-bl': 'radial-gradient(circle at bottom left,  #0f0f1a 82% , #2b1957 105%,#5a3d91 80%)',
+        // 'hero-gradient-br': 'radial-gradient(circle at bottom right,  #0f0f1a 82% , #2b1957 105%,#5a3d91 80%)',
+
+
       },
+
+
     },
   },
-  plugins: [],
+  plugins: [require('tailwind-scrollbar-hide')],
 };

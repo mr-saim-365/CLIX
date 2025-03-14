@@ -30,27 +30,23 @@ const Navbar = () => {
 
   return (
     <header >
-      {/* Top Bar */}
-      <div ref={ref} className="bg-hero-gradient-r text-[#ffffff] py-4 w-full text-sm md:text-[15px]">
-        <motion.div initial="hidden"
-          animate={inView ? "visible" : "hidden"} variants={containerVariants} className="container mx-auto w-full md:px-0 md:w-[90%] 2xl:w-[80%] flex justify-between items-center px-4">
-          <motion.div variants={itemVariants} className="flex items-center space-x-4">
-            <a href="mailto:contact@example.com" className="flex items-center space-x- hover:text-gray-700">
-              <span>infoclix@gmail.com</span>
-            </a>
-            <span className="text-gray-400">|</span>
-            <span className="flex items-center">0321-2427626</span>
-          </motion.div>
-          <motion.div variants={itemVariants} className="hidden md:flex items-center space-x-4 ">
-            <a href="#" className="hover:text-gray-700"><FaTwitter size={18} /></a>
-            <a href="#" className="hover:text-blue-700"><FaFacebookF size={18} /></a>
-            <a href="#" className="hover:text-pink-500"><FaInstagram size={18} /></a>
-          </motion.div>
+      <motion.div initial="hidden"
+        animate={inView ? "visible" : "hidden"} variants={containerVariants} className="container mx-auto w-full md:px-0 md:w-[90%] 2xl:w-[80%] flex justify-between items-center px-4">
+        <motion.div variants={itemVariants} className="flex items-center space-x-4">
+          <a href="mailto:contact@example.com" className="flex items-center space-x- hover:text-gray-700">
+            <span>infoclix@gmail.com</span>
+          </a>
+          <span className="text-gray-400">|</span>
+          <span className="flex items-center">0321-2427626</span>
         </motion.div>
-      </div>
+        <motion.div variants={itemVariants} className="hidden md:flex items-center space-x-4 ">
+          <a href="#" className="hover:text-gray-700"><FaTwitter size={18} /></a>
+          <a href="#" className="hover:text-blue-700"><FaFacebookF size={18} /></a>
+          <a href="#" className="hover:text-pink-500"><FaInstagram size={18} /></a>
+        </motion.div>
+      </motion.div>
 
-      {/* Branding & Navigation */}
-      <div ref={ref} className="bg-hero-gradient-r py-4">
+      <div ref={ref} className=" py-4">
         <motion.div initial="hidden"
           animate={inView ? "visible" : "hidden"} variants={containerVariants} >
 
@@ -76,7 +72,6 @@ const Navbar = () => {
               <Link href="#contact" className="hover:text-gray-700">Contact Us</Link>
             </nav>
 
-            {/* Mobile Menu Toggle */}
             <button
               className="md:hidden"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -89,7 +84,6 @@ const Navbar = () => {
         </motion.div>
       </div>
 
-      {/* Mobile Navigation */}
       {mobileMenuOpen && (
         <motion.nav
           initial={{ maxHeight: 0, opacity: 0 }}

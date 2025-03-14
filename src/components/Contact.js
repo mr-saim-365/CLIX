@@ -17,7 +17,7 @@ const ContactSection = () => {
     }, [inView, controls]);
 
     return (
-        <section className="contact py-16 bg-hero-gradient">
+        <section className="contact py-16 px-4 md:px-0 bg-hero-gradient-bl">
             <motion.div
                 ref={ref}
                 initial="hidden"
@@ -46,7 +46,7 @@ const ContactSection = () => {
                 transition={{ duration: 1 }}
                 className="container mx-auto"
             >
-                <div className="flex lg:flex-row items-center flex-col gap-8 px-3 md:px-0">
+                <div className="flex lg:flex-row items-center flex-col gap-8">
 
                     <div className="flex flex-col bg-[#222222] text-[#ffffff] rounded-lg text-sm p-5 space-y-6 lg:w-[40%] 2xl:w-[30%] w-full">
 
