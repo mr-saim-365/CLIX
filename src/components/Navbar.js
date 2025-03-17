@@ -31,7 +31,7 @@ const Navbar = () => {
   return (
     <header >
       <motion.div initial="hidden"
-        animate={inView ? "visible" : "hidden"} variants={containerVariants} className="container mx-auto w-full md:px-0 md:w-[90%] 2xl:w-[80%] flex justify-between items-center px-4">
+        animate={inView ? "visible" : "hidden"} variants={containerVariants} className=" mx-auto w-full md:px-0 md:w-[90%] 2xl:w-[80%] flex justify-between items-center px-4">
         <motion.div variants={itemVariants} className="flex items-center space-x-4">
           <a href="mailto:contact@example.com" className="flex items-center space-x- hover:text-gray-700">
             <span>infoclix@gmail.com</span>
@@ -39,18 +39,18 @@ const Navbar = () => {
           <span className="text-gray-400">|</span>
           <span className="flex items-center">0321-2427626</span>
         </motion.div>
-        <motion.div variants={itemVariants} className="hidden md:flex items-center space-x-4 ">
+        <motion.div variants={itemVariants} className="hidden sm:flex items-center space-x-4 ">
           <a href="#" className="hover:text-gray-700"><FaTwitter size={18} /></a>
           <a href="#" className="hover:text-blue-700"><FaFacebookF size={18} /></a>
           <a href="#" className="hover:text-pink-500"><FaInstagram size={18} /></a>
         </motion.div>
       </motion.div>
 
-      <div ref={ref} className=" py-4">
+      <div ref={ref} className=" my-8">
         <motion.div initial="hidden"
           animate={inView ? "visible" : "hidden"} variants={containerVariants} >
 
-          <motion.div variants={itemVariants} className="container mx-auto flex text-[#ffffff] justify-between items-center px-4 md:px-1">
+          <motion.div variants={itemVariants} className="mx-auto flex text-[#ffffff] justify-between items-center px-4 md:w-[90%] 2xl:w-[80%] md:px-1">
             <Link href="/" className="flex items-center space-x-1 text-2xl font-bold">
               <span>CLI-X</span>
             </Link>

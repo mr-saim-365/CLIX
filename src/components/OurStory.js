@@ -47,7 +47,7 @@ const OurStory = () => {
                         </div>
                     </motion.div>
 
-                    <motion.div variants={itemVariants2} className="relative flex flex-col md:flex-row gap-10 items-center w-[450px] lg:w-auto justify-between bg-[#222222] rounded-3xl p-6 md:p-10 shadow-lg overflow-hidden">
+                    <motion.div variants={itemVariants2} className="relative flex flex-col md:flex-row gap-10 items-center w-[350px] sm:w-[450px] lg:w-auto justify-between bg-[#222222] rounded-3xl p-6 md:p-10 shadow-lg overflow-hidden">
                         {/* Left Image Section */}
                         <div className="relative w-full md:w-1/2 overflow-hidden">
                             <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent"></div>

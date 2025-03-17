@@ -73,36 +73,7 @@ const Hero = () => {
                             </div>
                         </div>
 
-                        <div className="relative pt-0 pb-[60px] z-[4]" data-aos="fade-up" data-aos-delay="200">
-                            <div className="container relative w-full px-6 md:w-[90%] 2xl:w-[80%] mx-auto">
-                                <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 mt-16 text-[#ffffff]">
-                                    <div className="h-full w-full text-center p-[60px_30px] relative  overflow-hidden bg-[#222222] rounded-lg shadow-[0_0_29px_rgba(255,255,255,0.3)]
-                                transition-all duration-300 hover:bg-[var(--background-color)/90]">
-                                        <h4 className="font-bold text-2xl mb-[15px]">
-                                            <Link href="#" className="transition-colors duration-300 hover:text-[var(--contrast-color)]">Code</Link>
-                                        </h4>
-                                    </div>
 
-                                    <div className="h-full w-full text-center p-[60px_30px] relative overflow-hidden bg-[#222222] rounded-lg shadow-[0_0_29px_rgba(255,255,255,0.3)] transition-all duration-300 hover:bg-[var(--background-color)/90]">
-                                        <h4 className="font-bold text-2xl mb-[15px]">
-                                            <Link href="#" className="transition-colors duration-300 hover:text-[var(--contrast-color)]">Innovate</Link>
-                                        </h4>
-                                    </div>
-
-                                    <div className="h-full w-full text-center p-[60px_30px] relative overflow-hidden bg-[#222222] rounded-lg shadow-[0_0_29px_rgba(255,255,255,0.3)] transition-all duration-300 hover:bg-[var(--background-color)/90]">
-                                        <h4 className="font-bold text-2xl mb-[15px]">
-                                            <Link href="#" className="transition-colors duration-300 hover:text-[var(--contrast-color)]">Transform</Link>
-                                        </h4>
-                                    </div>
-
-                                    <div className="h-full w-full text-center p-[60px_30px] relative overflow-hidden bg-[#222222] rounded-lg shadow-[0_0_29px_rgba(255,255,255,0.3)] transition-all duration-300 hover:bg-[var(--background-color)/90]">
-                                        <h4 className="font-bold text-2xl mb-[15px]">
-                                            <Link href="#" className="transition-colors duration-300 hover:text-[var(--contrast-color)]">Succeed</Link>
-                                        </h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </section>
                 </div>
             </div>

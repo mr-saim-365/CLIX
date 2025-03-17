@@ -22,7 +22,7 @@ const Cards = () => {
         <>
             <div ref={ref} className="bg-hero-gradient-br ">
                 <div className="min-h-screen text-white px-8 py-20 flex flex-wrap gap-6 items-center justify-center">
-                    <div className="flex flex-col md:flex-row  gap-5">
+                    <div className="flex flex-col md:flex-row gap-5 md:gap-10">
                         <div className="flex flex-col gap-5">
                             <motion.div
                                 initial="hidden"
@@ -32,7 +32,7 @@ const Cards = () => {
                                     visible: { scale: 1, opacity: 1 }
                                 }}
                                 transition={{ duration: 0.8 }}
-                                className="bg-[#222222] rounded-3xl w-[450px] md:w-[400px] lg:w-[450px] shadow-lg flex flex-col">
+                                className="bg-[#222222] rounded-3xl w-[350px] sm:w-[450px] md:w-[360px] lg:w-[450px] shadow-lg flex flex-col">
                                 <div className="px-10 py-8">
                                     <h2 className="text-xl font-bold">Fast Websites, Always</h2>
                                     <p className="text-white/60 text-sm mt-2">
@@ -84,7 +84,7 @@ const Cards = () => {
                                     visible: { scale: 1, opacity: 1 }
                                 }}
                                 transition={{ duration: 0.8 }}
-                                className="bg-[#222222] rounded-3xl w-[450px] md:w-[400px] lg:w-[450px] shadow-lg flex flex-col gap-5">
+                                className="bg-[#222222] rounded-3xl w-[350px] sm:w-[450px] md:w-[360px] lg:w-[450px] shadow-lg flex flex-col gap-5">
                                 <div className="px-10 py-8">
                                     <h2 className="text-xl font-bold">Help When You Need It</h2>
                                     <p className="text-white/60 text-sm mt-2">
@@ -148,7 +148,7 @@ const Cards = () => {
                                     visible: { scale: 1, opacity: 1 }
                                 }}
                                 transition={{ duration: 0.8 }}
-                                className="bg-[#222222]  rounded-3xl w-[450px] md:w-[400px] lg:w-[450px] shadow-lg">
+                                className="bg-[#222222]  rounded-3xl w-[350px] sm:w-[450px] md:w-[360px] lg:w-[450px] shadow-lg">
                                 <div className="px-10 py-8">
                                     <h2 className="text-xl font-bold">Grow Your Website Easily</h2>
                                     <p className="text-gray-400 text-sm mt-2">
@@ -164,7 +164,7 @@ const Cards = () => {
 
 
                                     <div>
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="rounded-3xl">
                                             <defs>
                                                 <linearGradient id="strokeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
                                                     <stop offset="0%" stopColor="#FF6A6A" />
@@ -191,7 +191,7 @@ const Cards = () => {
                                     visible: { scale: 1, opacity: 1 }
                                 }}
                                 transition={{ duration: 0.8 }}
-                                className="bg-[#222222] rounded-3xl w-[450px] md:w-[400px] lg:w-[450px] shadow-lg flex flex-col gap-5">
+                                className="bg-[#222222] rounded-3xl w-[350px] sm:w-[450px] md:w-[360px] lg:w-[450px] shadow-lg flex flex-col gap-5">
                                 <div className="px-10 py-8">
                                     <h2 className="text-xl font-bold">Keep Your Website Safe</h2>
                                     <p className="text-white/60 text-sm mt-2">
@@ -216,7 +216,7 @@ const Cards = () => {
                                     visible: { scale: 1, opacity: 1 }
                                 }}
                                 transition={{ duration: 0.8 }}
-                                className="bg-[#222222] rounded-3xl w-[450px] md:w-[400px] lg:w-[450px] shadow-lg flex flex-col gap-5">
+                                className="bg-[#222222] rounded-3xl w-[350px] sm:w-[450px] md:w-[360px] lg:w-[450px] shadow-lg flex flex-col gap-5">
                                 <div className="px-10 py-8">
                                     <h2 className="text-xl font-bold">Great Service, Affordable Prices</h2>
                                     <p className="text-white/60 text-sm mt-2">
