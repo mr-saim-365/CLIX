@@ -1,44 +1,48 @@
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
 
 
 const OurStory = () => {
+
+    const controls = useAnimation();
 
     const { ref, inView } = useInView({
         triggerOnce: false,
         threshold: 0.2,
     });
 
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: { staggerChildren: 0.3 },
-        },
-    };
+    useEffect(() => {
+        if (inView) {
+            controls.start("visible");
+        } else {
+            controls.start("hidden");
+        }
+    }, [inView, controls]);
+
 
     const itemVariants1 = {
-        hidden: { opacity: 0, x: -60 },
+        hidden: { opacity: 0, x: -60, transition: { delay: 0.8 } },
         visible: { opacity: 1, x: 0, transition: { duration: 0.8 } },
     };
 
     const itemVariants2 = {
-        hidden: { opacity: 0, x: -90 },
+        hidden: { opacity: 0, x: -90, transition: { delay: 0.8 } },
         visible: { opacity: 1, x: 0, transition: { duration: 1 } },
     };
-
-
 
     return (
         <>
             <div className="w-full bg-hero-gradient-tr relative py-20">
-                <motion.div ref={ref} initial="hidden"
-                    animate={inView ? "visible" : "hidden"} variants={containerVariants} className="flex flex-col md:flex-row gap-5 lg:gap-10 items-center justify-center">
-                    <motion.div variants={itemVariants1} className="flex flex-col gap-10 rounded-3xl bg-[#222222]">
+                <motion.div ref={ref} className="flex flex-col md:flex-row gap-5 lg:gap-10 items-center justify-center px-3">
+                    <motion.div
+                        animate={controls}
+                        variants={itemVariants1}
+                        className="flex flex-col gap-3 rounded-3xl bg-[#222222]">
                         <div className=" p-5">
-                            <h1 className="text-4xl text-[#ffffff] mb-3">35,000</h1>
+                            <h1 className="text-2xl md:text-3xl 2xl:text-4xl  text-[#ffffff] mb-3">35,000</h1>
                             <h2 className="text-white/60 text-lg">Websites Already Thriving with Us!</h2>
                         </div>
 
@@ -47,12 +51,15 @@ const OurStory = () => {
                         </div>
                     </motion.div>
 
-                    <motion.div variants={itemVariants2} className="relative flex flex-col md:flex-row gap-10 items-center w-[350px] sm:w-[450px] lg:w-auto justify-between bg-[#222222] rounded-3xl p-6 md:p-10 shadow-lg overflow-hidden">
+                    <motion.div
+                        animate={controls}
+                        variants={itemVariants2}
+                        className="relative flex flex-col md:flex-row gap-10 items-center w-[320px] sm:w-[450px] lg:w-auto justify-between bg-[#222222] rounded-3xl p-6 md:p-10 shadow-lg overflow-hidden">
                         {/* Left Image Section */}
                         <div className="relative w-full md:w-1/2 overflow-hidden">
                             <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent"></div>
                             <Image
-                                src="/images/feature-image.jpg" // Update with your image path
+                                src="/images/feature-image.jpg"
                                 alt="Feature Image"
                                 width={500}
                                 height={300}
@@ -62,7 +69,7 @@ const OurStory = () => {
 
                         {/* Right Text Section */}
                         <div className="w-full md:w-1/2 text-white text-center md:text-left space-y-4">
-                            <h2 className="text-2xl md:text-3xl font-semibold">
+                            <h2 className="text-xl md:text-2xl 2xl:text-3xl font-semibold">
                                 Experience <span className="text-green-200">the power of</span> <br />
                                 <span className="text-green-200">speed</span> with our <br />
                                 cutting-edge <br />

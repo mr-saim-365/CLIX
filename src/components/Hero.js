@@ -62,7 +62,7 @@ const Hero = () => {
                                  transition duration-300 hover:border-[var(--default-color)/40]">Get Started</Link>
                                     </motion.div>
                                 </div>
-                                <div className="w-full h-[40vh] md:h-[50vh] lg:w-5/12 order-1 lg:order-2">
+                                <div className="w-full h-[40vh] md:h-[60vh] lg:w-5/12 order-1 lg:order-2">
                                     <Canvas>
                                         <OrbitControls enableZoom={false} enablePan={false} />
                                         <ambientLight intensity={2} />
