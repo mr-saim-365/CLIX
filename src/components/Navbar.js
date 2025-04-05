@@ -29,7 +29,7 @@ const Navbar = () => {
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
 
   return (
-    <header >
+    <header className="py-5">
       <motion.div initial="hidden"
         animate={inView ? "visible" : "hidden"} variants={containerVariants} className=" mx-auto w-full md:px-0 md:w-[90%] 2xl:w-[80%] flex justify-between items-center px-4">
         <motion.div variants={itemVariants} className="flex items-center space-x-4">
@@ -57,7 +57,7 @@ const Navbar = () => {
 
             {/* Desktop Navigation */}
             <nav variants={itemVariants} className="hidden md:flex items-center space-x-6">
-              <Link href="#hero" className="hover:text-gray-700">Home</Link>
+              <Link href="/" className="hover:text-gray-700">Home</Link>
               <div
                 className="relative"
                 onMouseEnter={() => setServicesDropdownOpen(true)}
@@ -69,7 +69,7 @@ const Navbar = () => {
                 </button>
               </div>
               <Link href="#about" className="hover:text-gray-700">About Us</Link>
-              <Link href="#contact" className="hover:text-gray-700">Contact Us</Link>
+              <Link href="/ContactUs" className="hover:text-gray-700">Contact Us</Link>
             </nav>
 
             <button
@@ -90,7 +90,7 @@ const Navbar = () => {
           animate={{ maxHeight: mobileMenuOpen ? 500 : 0, opacity: mobileMenuOpen ? 1 : 0 }}
           transition={{ duration: 0.7, ease: "easeInOut" }} className="md:hidden text-[#ffffff] bg-hero-gradient-r p-6 overflow-hidden">
           <ul className="flex flex-col gap-5">
-            <li><Link href="#hero">Home</Link></li>
+            <li><Link href="/">Home</Link></li>
             <li>
               <details className="group">
                 <summary className="cursor-pointer flex justify-between items-center">
@@ -105,7 +105,7 @@ const Navbar = () => {
               </details>
             </li>
             <li><Link href="#about">About Us</Link></li>
-            <li><Link href="#contact">Contact Us</Link></li>
+            <li><Link href="/ContactUs">Contact Us</Link></li>
           </ul>
         </motion.nav>
       )}

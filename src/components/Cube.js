@@ -6,7 +6,7 @@ import { useMotionValue, useSpring } from "framer-motion";
 const Cube = () => {
 
     const mesh = useRef(null);
-    const texture_1 = useLoader(TextureLoader, "/images/cube.jpg");
+    const texture_1 = useLoader(TextureLoader, "/images/3dCube.png");
 
     useFrame((state, delta) => {
 
