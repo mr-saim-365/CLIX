@@ -5,7 +5,7 @@ import ScrollTop from "@/components/ScrollTop";
 import OurStory from "@/components/OurStory";
 import Cards from "@/components/Cards";
 import Footer from "@/components/Footer";
-
+import '@fontsource/rubik';
 
 const Home = () => {
 

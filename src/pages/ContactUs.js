@@ -89,7 +89,7 @@ const Contact = () => {
           </motion.div>
 
           <div className="container mx-auto flex lg:flex-row items-center flex-col gap-8">
-            {/* Contact Info Section */}
+
             <motion.div
               ref={infoRef}
               initial="hidden"
@@ -124,7 +124,7 @@ const Contact = () => {
               ))}
             </motion.div>
 
-            {/* Contact Form Section */}
+
             <motion.div
               ref={formRef}
               initial="hidden"
@@ -189,7 +189,6 @@ const Contact = () => {
                   className="w-full p-3 rounded-lg bg-[#222222] text-white focus:ring-1 focus:ring-white/60 outline-none"
                 ></textarea>
 
-                {/* Status Messages */}
                 {status === "success" && (
                   <p className="text-green-500 font-medium">Message sent successfully!</p>
                 )}

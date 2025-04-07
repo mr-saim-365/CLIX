@@ -17,6 +17,7 @@ export default {
 
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],
+        rubik: ['Rubik', 'sans-serif'],
       },
 
       backgroundImage: {
