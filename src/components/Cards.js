@@ -335,7 +335,7 @@ const Cards = () => {
                   <svg
                     width="80"
                     height="80"
-                    viewBox="0 0 24 24"
+                    viewBox="-4 -4 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <defs>
@@ -375,7 +375,7 @@ const Cards = () => {
                   <svg
                     width="70"
                     height="70"
-                    viewBox="0 0 24 24"
+                    viewBox="-4 -3 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <defs>
@@ -505,22 +505,22 @@ const Cards = () => {
                 </p>
               </div>
 
-              <div className="flex gap-2 py-8 overflow-x-auto scrollbar-hide w-full whitespace-nowrap hide-scrollbar px-3">
-                <div className="bg-[#ffffff] rounded-xl p-5 flex flex-col gap-1 min-w-[80%]">
+              <div className="flex gap-2 py-8 overflow-x-auto scrollbar-hide w-full hide-scrollbar px-3">
+                <div className="bg-[#ffffff] rounded-xl p-3 md:p-5 flex flex-col gap-1 min-w-[80%]">
                   <h4 className="text-black text-[16px] font-bold">Premium</h4>
                   <p className="text-gray-500 text-[14px]">
                     Prioritizing top-tier performance
                   </p>
                 </div>
 
-                <div className="bg-[#ffffff] rounded-xl p-5 flex flex-col gap-1 min-w-[90%]">
+                <div className="bg-[#ffffff] rounded-xl p-3 md:p-5 flex flex-col gap-1 min-w-[90%]">
                   <h4 className="text-black text-[16px] font-bold">Business</h4>
                   <p className="text-gray-500 text-[14px]">
                     Scalable hosting tailored for growing businesses
                   </p>
                 </div>
 
-                <div className="bg-[#ffffff] rounded-xl  p-5 flex flex-col gap-1 min-w-full">
+                <div className="bg-[#ffffff] rounded-xl  p-3 md:p-5 flex flex-col gap-1 min-w-full">
                   <h4 className="text-black text-[16px] font-bold">Gold</h4>
                   <p className="text-gray-500 text-[14px]">
                     Balanced hosting solution for small to medium-sized web.
