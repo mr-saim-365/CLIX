@@ -5,7 +5,7 @@ export default function Document() {
     <Html lang="en">
       <Head />
       <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet"></link>
-      <body className="antialiased font-rubik">
+      <body className="antialiased font-rubik scroll-smooth">
         <Main />
         <NextScript />
       </body>

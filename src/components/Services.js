@@ -124,7 +124,7 @@ const Services = () => {
   };
 
   return (
-    <section className="bg-hero-gradient-tl py-20">
+    <section id="services" className="bg-hero-gradient-tl py-20">
       <div className="w-full px-6 md:px-0 md:w-[90%] 2xl:w-[70%] mx-auto text-[#ffffff]">
 
         <div
@@ -196,7 +196,7 @@ const Services = () => {
         </div>
 
 
-        <section id="about" className="mt-16">
+        <section id="AboutUs" className="mt-16">
           <motion.div
             initial="hidden"
             whileInView="visible"

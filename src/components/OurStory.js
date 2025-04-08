@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import { motion } from "framer-motion";
 
 const itemVariants1 = {
@@ -26,7 +26,7 @@ const OurStory = () => {
 
 
                 <motion.div
-                    className="flex flex-col gap-3 rounded-3xl w-full sm:w-[500px] md:w-[40%] lg:max-w-[500px] bg-[#222222]"
+                    className="flex flex-col gap-3 rounded-3xl w-full sm:w-[500px] md:w-[40%] lg:max-w-[450px] bg-[#222222]"
                     variants={itemVariants1}
                     initial="hidden"
                     whileInView="visible"
@@ -36,7 +36,7 @@ const OurStory = () => {
                         <h1 className="text-2xl md:text-3xl 2xl:text-4xl text-[#ffffff] mb-3">35,000</h1>
                         <h2 className="text-white/60 text-lg ">Join a community of thriving businesses and creators who trust us to bring their digital vision to life.</h2>
                     </div>
-                    <div className="w-full h-[200px] overflow-hidden [mask-image:radial-gradient(circle_at_top_left,_white,_transparent)]">
+                    <div className="w-full h-[200px] overflow-hidden rounded-bl-3xl rounded-br-3xl [mask-image:radial-gradient(circle_at_top_left,_white,_transparent)]">
                         <img src="/images/nature.jpg" alt="Styled Image" className="w-full h-full object-cover" />
                     </div>
                 </motion.div>

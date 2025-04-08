@@ -24,17 +24,15 @@ const Hero = () => {
           data-aos-delay="100"
         >
           <div className="flex flex-wrap justify-between gap-y-10">
-  
             <div className="w-full lg:w-1/2 order-2 lg:order-1 flex flex-col justify-center">
               <motion.h2
-                className="md:text-[48px] text-[#ffffff] mb-5 text-[36px] font-bold font-rubik"
+                className="md:text-[48px] text-[#ffffff] mb-3 text-[36px] leading-normal font-bold font-rubik"
                 variants={fadeLeft}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
               >
-                <span>Welcome to </span>
-                <span>CLI-X</span>
+                Welcome to CLI-X
               </motion.h2>
 
               <motion.p
@@ -64,7 +62,6 @@ const Hero = () => {
                 </Link>
               </motion.div>
             </div>
-
 
             <div className="w-full h-[40vh] md:h-[60vh] lg:w-5/12 order-1 lg:order-2">
               <GlossyCube />
